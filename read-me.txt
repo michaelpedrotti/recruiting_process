@@ -1,0 +1,5 @@
+Each directory has a different kind of test. The result files are inside each directory, all start with "answers",  and end with diferent kinds of extensions. So, before send it to a candidate remove all.
+
+All tests are very simple, no one requires a CRUD. Just simple programing logic for a Junior Developer.
+
+At Michael!

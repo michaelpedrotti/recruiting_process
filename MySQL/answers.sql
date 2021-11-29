@@ -49,22 +49,23 @@ DELIMITER ;
 -- 2: Users
 
 -- 2.1, 2.2: Insert new users
-INSERT INTO `odds_scanner`.`users` (`id`,  `displayname`, `username`, `enabled`) VALUES (1, 'Moe Howard',  'moe.howard', PASSWORD(NOW()));
-INSERT INTO `odds_scanner`.`users` (`id`, `displayname`, `username`, `enabled`) VALUES (2, 'Larry Fine', 'larry.fine', PASSWORD(NOW()));
-INSERT INTO `odds_scanner`.`users` (`id`, `displayname`, `username`, `enabled`) VALUES (3, 'Curly Howard', 'curly.howard', PASSWORD(NOW()));
-INSERT INTO `odds_scanner`.`users` (`id`,  `displayname`, `username`, `enabled`) VALUES (4, 'Shemp Howard', 'shemp.howard', PASSWORD(NOW()));
-INSERT INTO `odds_scanner`.`users` (`id`,  `displayname`, `username`, `enabled`) VALUES (5, 'Joe Besser', 'joe.besser', PASSWORD(NOW()));
-INSERT INTO `odds_scanner`.`users` (`id`,  `displayname`, `username`, `enabled`) VALUES (6, 'Joe DeRita', 'joe.deRita', PASSWORD(NOW()));
+-- column users.enabled by default is 'Y' value. So, if a answered with 'Y' in last parameter will be correct too.
+INSERT INTO `odds_scanner`.`users` VALUES (1, 'Moe Howard',  'moe.howard', PASSWORD(NOW()));
+INSERT INTO `odds_scanner`.`users` VALUES (2, 'Larry Fine', 'larry.fine', PASSWORD(NOW()));
+INSERT INTO `odds_scanner`.`users` VALUES (3, 'Curly Howard', 'curly.howard', PASSWORD(NOW()));
+INSERT INTO `odds_scanner`.`users` VALUES (4, 'Shemp Howard', 'shemp.howard', PASSWORD(NOW()));
+INSERT INTO `odds_scanner`.`users` VALUES (5, 'Joe Besser', 'joe.besser', PASSWORD(NOW()));
+INSERT INTO `odds_scanner`.`users` VALUES (6, 'Joe DeRita', 'joe.deRita', PASSWORD(NOW()));
 
 
 -- 2.3: Insert new users
 -- if 1.5 was implemented this block should be not needed
-INSERT INTO `odds_scanner`.`emails` (`user_id`, `email`) VALUES (1, 'moe.howard@columbia.com');
-INSERT INTO `odds_scanner`.`emails` (`user_id`, `email`) VALUES (2, 'larry.fine@columbia.com');
-INSERT INTO `odds_scanner`.`emails` (`user_id`, `email`) VALUES (3, 'curly.howard@columbia.com');
-INSERT INTO `odds_scanner`.`emails` (`user_id`, `email`) VALUES (4, 'shemp.howard@columbia.com');
-INSERT INTO `odds_scanner`.`emails` (`user_id`, `email`) VALUES (5, 'joe.besser@columbia.com');
-INSERT INTO `odds_scanner`.`emails` (`user_id`, `email`) VALUES (6, 'joe.deRita@columbia.com');
+INSERT INTO `odds_scanner`.`emails` VALUES (1, 'moe.howard@columbia.com');
+INSERT INTO `odds_scanner`.`emails` VALUES (2, 'larry.fine@columbia.com');
+INSERT INTO `odds_scanner`.`emails` VALUES (3, 'curly.howard@columbia.com');
+INSERT INTO `odds_scanner`.`emails` VALUES (4, 'shemp.howard@columbia.com');
+INSERT INTO `odds_scanner`.`emails` VALUES (5, 'joe.besser@columbia.com');
+INSERT INTO `odds_scanner`.`emails` VALUES (6, 'joe.deRita@columbia.com');
 
 -- 3: Projects
 INSERT INTO `odds_scanner`.`projects` VALUES (1, 'TV SHOW', 'Television', '5000', '1922-01-01', '1970-12-31');
@@ -75,6 +76,7 @@ INSERT INTO `odds_scanner`.`projects` VALUES (5, 'Have Rocket, Will Travel', 'Mo
 
 -- 4: Original formation from 1933
 -- 4.1
+-- column user_projects.enabled by default is 'Y' value. So, if a answered with 'Y' in last parameter will be correct too.
 INSERT INTO `odds_scanner`.`user_projects` VALUES (1, 1);
 INSERT INTO `odds_scanner`.`user_projects` VALUES (2, 1);
 INSERT INTO `odds_scanner`.`user_projects` VALUES (3, 1);
